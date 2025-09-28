@@ -14,3 +14,10 @@ def get_books(request):
     books = Book.objects.all()
     serializer = BookSerializer(books, many=True).data
     return Response(serializer)
+
+@api_view(['POST'])
+def create_book(request):
+    books = Book.objects.all()
+    serializer = BookSerializer(books, many=True).data
+    return Response(serializer)
+
